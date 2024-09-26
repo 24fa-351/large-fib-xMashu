@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-long long int iterative(long long int n)
+long int iterative(long int n)
 {
    if (n == 0)
    {
@@ -11,9 +11,9 @@ long long int iterative(long long int n)
       return 1;
    }
 
-   long long int current = 1;
-   long long int prev = 0;
-   long long int next = 0;
+long int current = 1;
+long int prev = 0;
+long int next = 0;
    for(int i = 1; i < n; ++i)
    {
       next = prev + current;
@@ -24,7 +24,7 @@ long long int iterative(long long int n)
 
 }
 
-long long int recursion(long long int n)
+long int recursion(long int n)
 {
    if(n == 0)
    {
@@ -50,14 +50,11 @@ int main(int argc, char *argv[]) {
 
    char fibOption = *argv[2]; // if recursive or iterative
 
-   long long int n = 0;
+long int n = 0;
    n = commandLineInt -1; 
    // -1 cuz fib has to start at 0
 
-
-
-
-   long long int result = 0; //set to 0 so if no response it'll just default to 0
+long int result = 0; //set to 0 so if no response it'll just default to 0
 
    if(fibOption == 'i')
    {
@@ -68,6 +65,6 @@ int main(int argc, char *argv[]) {
       result = recursion(n);
    }
 
-   printf("%lld\n", result);
+   printf("%ld\n", result);
 
 }
